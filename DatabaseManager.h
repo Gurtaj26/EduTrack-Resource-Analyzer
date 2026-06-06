@@ -11,10 +11,10 @@ private:
 
 public:
     void appendRecord(Student& std) {
-        // .c_str() translates the string path cleanly for the file system
+        
         ofstream outFile(filename.c_str(), ios::app); 
         if (outFile.is_open()) {
-            // FIXED: Changed std::getName() to std.getName()
+            
             outFile << std.getId() << "," 
                     << std.getName() << "," 
                     << std::fixed << std::setprecision(2) << std.getCgpa() << "," 
